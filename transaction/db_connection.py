@@ -67,14 +67,14 @@ class MySQL:
 
     def get_value(self, sql):
         self.cursor.execute(sql)
-        if self.echo:
-            self.print_sql(self.cursor._last_executed.decode())
+        # if self.echo:
+            # self.print_sql(self.cursor._last_executed.decode())
         return self.cursor.fetchone()[0]
 
     def print_table(self, sql):
         self.cursor.execute(sql)
-        if self.echo:
-            self.print_sql(self.cursor._last_executed.decode())
+        # if self.echo:
+        #     self.print_sql(self.cursor._last_executed.decode())
 
         table = Texttable()
         table.add_rows(self.cursor.fetchall())
@@ -103,8 +103,8 @@ class MySQL:
             if self.show_errors:
                 print(e)
 
-        if self.echo:
-            self.print_sql(self.cursor._last_executed.decode(), error=execute_error)
+        # if self.echo:
+        #     self.print_sql(self.cursor._last_executed.decode(), error=execute_error)
 
     def __del__(self):
         self.close()
