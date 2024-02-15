@@ -33,7 +33,7 @@ class MySQL:
     Основной класс для работы с MySQL.
     """
 
-    def __init__(self, echo=True, show_errors=False, auto_commit=False):
+    def __init__(self, echo=True, show_errors=True, auto_commit=False):
         """
         :param echo: печатает SQL запросы. 
         :param show_errors: печатает ошибки.

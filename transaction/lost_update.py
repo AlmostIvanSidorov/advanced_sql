@@ -2,7 +2,9 @@ from db_connection import MySQL,ExecuteError
 
 mysql = MySQL()
 
-mysql.execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;")
+# mysql.execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;")
+mysql.execute("SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;")
+
 mysql.execute("START TRANSACTION;")
 
 try:
