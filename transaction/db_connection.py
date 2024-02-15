@@ -58,8 +58,10 @@ class MySQL:
             execute_error = True
             if self.show_errors:
                 print(e)
+                
 
-        # if self.echo:
+        if self.echo:
+            print(sql)
         #     self.print_sql(self.cursor._last_executed.decode(), error=execute_error)
 
         if execute_error:
@@ -67,13 +69,16 @@ class MySQL:
 
     def get_value(self, sql):
         self.cursor.execute(sql)
-        # if self.echo:
+        if self.echo:
+            print(sql)
             # self.print_sql(self.cursor._last_executed.decode())
         return self.cursor.fetchone()[0]
 
     def print_table(self, sql):
         self.cursor.execute(sql)
-        # if self.echo:
+
+        if self.echo:
+            print(sql)
         #     self.print_sql(self.cursor._last_executed.decode())
 
         table = Texttable()
