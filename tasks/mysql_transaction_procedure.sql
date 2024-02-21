@@ -5,6 +5,7 @@ DELIMITER $$
 CREATE PROCEDURE order_payment(order_id int, amount int , payment_date datetime )
 BEGIN
     DECLARE _rollback BOOL DEFAULT FALSE;
+    DECLARE from_balance DECIMAL DEFAULT 0;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET _rollback = TRUE;
 
     SELECT balance INTO from_balance FROM accounts WHERE id = from_account_id;
