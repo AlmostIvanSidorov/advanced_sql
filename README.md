@@ -12,3 +12,7 @@ framework: settings echo=True, show_errors=True, auto_commit=False
 [Использование EXPLAIN. Улучшение запросов.](https://habr.com/ru/post/211022/)
 [MySQL Performance real life Tips and Tricks.](https://habr.com/ru/post/38907/)
 [EXPLAIN Syntax (en).](https://dev.mysql.com/doc/refman/8.0/en/explain.html)
+
+Postgres connector:
+
+https://www.youtube.com/watch?v=M2NzvnfS-hI
